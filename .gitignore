@@ -234,8 +234,11 @@ _Pvt_Extensions
 
 # FAKE - F# Make
 .fake/
+<<<<<<< HEAD
 
 boost/Libraries-32-Debug
 boost/Libraries-32-Release
 boost/Libraries-64-Debug
 boost/Libraries-64-Release
+=======
+>>>>>>> 21eab7837be291ade5321b45f097178a053a9017
