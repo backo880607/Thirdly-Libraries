@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="..">
+      <UniqueIdentifier>{060752c2-4635-4b67-94a9-c1cb79c664cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{7a0fb7a0-e12b-4486-bf61-2c65d7240ca0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\common">
+      <UniqueIdentifier>{a6843547-5b5f-479d-9d9b-a76c8c3c52fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\common\windows">
+      <UniqueIdentifier>{654de1b1-82fa-44c8-bba9-557e72317796}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="breakpad_client.gyp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\common\windows\guid_string.cc">
+      <Filter>..\..\common\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\windows\http_upload.cc">
+      <Filter>..\..\common\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\common\windows\string_utils.cc">
+      <Filter>..\..\common\windows</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\common\windows\guid_string.h">
+      <Filter>..\..\common\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\common\windows\http_upload.h">
+      <Filter>..\..\common\windows</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

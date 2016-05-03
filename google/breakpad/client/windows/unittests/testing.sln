@@ -1,0 +1,45 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gmock", "gmock.vcproj", "{ED40559F-82D0-2E49-E3F1-840111E14938}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gtest", "gtest.vcproj", "{9C475CFC-0EAC-03F5-4C86-AAAD3FCFCA88}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Purify|Win32 = Purify|Win32
+		Purify|x64 = Purify|x64
+		Release|x64 = Release|x64
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C475CFC-0EAC-03F5-4C86-AAAD3FCFCA88}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9C475CFC-0EAC-03F5-4C86-AAAD3FCFCA88}.Debug|Win32.Build.0 = Debug|Win32
+		{9C475CFC-0EAC-03F5-4C86-AAAD3FCFCA88}.Debug|x64.ActiveCfg = Debug|x64
+		{9C475CFC-0EAC-03F5-4C86-AAAD3FCFCA88}.Debug|x64.Build.0 = Debug|x64
+		{9C475CFC-0EAC-03F5-4C86-AAAD3FCFCA88}.Purify|Win32.ActiveCfg = Purify|Win32
+		{9C475CFC-0EAC-03F5-4C86-AAAD3FCFCA88}.Purify|Win32.Build.0 = Purify|Win32
+		{9C475CFC-0EAC-03F5-4C86-AAAD3FCFCA88}.Purify|x64.ActiveCfg = Purify|x64
+		{9C475CFC-0EAC-03F5-4C86-AAAD3FCFCA88}.Purify|x64.Build.0 = Purify|x64
+		{9C475CFC-0EAC-03F5-4C86-AAAD3FCFCA88}.Release|x64.ActiveCfg = Release|x64
+		{9C475CFC-0EAC-03F5-4C86-AAAD3FCFCA88}.Release|x64.Build.0 = Release|x64
+		{9C475CFC-0EAC-03F5-4C86-AAAD3FCFCA88}.Release|Win32.ActiveCfg = Release|Win32
+		{9C475CFC-0EAC-03F5-4C86-AAAD3FCFCA88}.Release|Win32.Build.0 = Release|Win32
+		{ED40559F-82D0-2E49-E3F1-840111E14938}.Debug|Win32.ActiveCfg = Debug|Win32
+		{ED40559F-82D0-2E49-E3F1-840111E14938}.Debug|Win32.Build.0 = Debug|Win32
+		{ED40559F-82D0-2E49-E3F1-840111E14938}.Debug|x64.ActiveCfg = Debug|x64
+		{ED40559F-82D0-2E49-E3F1-840111E14938}.Debug|x64.Build.0 = Debug|x64
+		{ED40559F-82D0-2E49-E3F1-840111E14938}.Purify|Win32.ActiveCfg = Purify|Win32
+		{ED40559F-82D0-2E49-E3F1-840111E14938}.Purify|Win32.Build.0 = Purify|Win32
+		{ED40559F-82D0-2E49-E3F1-840111E14938}.Purify|x64.ActiveCfg = Purify|x64
+		{ED40559F-82D0-2E49-E3F1-840111E14938}.Purify|x64.Build.0 = Purify|x64
+		{ED40559F-82D0-2E49-E3F1-840111E14938}.Release|x64.ActiveCfg = Release|x64
+		{ED40559F-82D0-2E49-E3F1-840111E14938}.Release|x64.Build.0 = Release|x64
+		{ED40559F-82D0-2E49-E3F1-840111E14938}.Release|Win32.ActiveCfg = Release|Win32
+		{ED40559F-82D0-2E49-E3F1-840111E14938}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

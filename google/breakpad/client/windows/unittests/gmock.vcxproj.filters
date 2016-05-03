@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="..">
+      <UniqueIdentifier>{18da5712-b937-494e-aec3-e91966220f31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{b494dd96-2a63-4fc9-a534-8b388f0ebf70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{0423e591-1f55-403b-aafb-19b2200cee7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\testing">
+      <UniqueIdentifier>{c382f001-1dee-47ba-955b-7517d2a25feb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\testing\src">
+      <UniqueIdentifier>{d3482d58-7e7f-4985-99ad-1156615fc77a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="testing.gyp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\testing\src\gmock-all.cc">
+      <Filter>..\..\..\testing\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\testing\src\gmock_main.cc">
+      <Filter>..\..\..\testing\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

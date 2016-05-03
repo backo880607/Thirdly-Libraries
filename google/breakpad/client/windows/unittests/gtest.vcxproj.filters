@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="..">
+      <UniqueIdentifier>{0af44f39-4e2d-41c0-8068-c00f92eba28e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..">
+      <UniqueIdentifier>{4b854f9f-9b51-4528-8c38-5093bc238883}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..">
+      <UniqueIdentifier>{3e33e383-73b4-4c80-8f02-f78f04d273b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\testing">
+      <UniqueIdentifier>{bc24813a-23b8-4d11-ac4b-5fcd7ba00e42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\testing\gtest">
+      <UniqueIdentifier>{d400a05c-923e-4c50-807e-8381290ceb61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\..\..\testing\gtest\src">
+      <UniqueIdentifier>{24226136-b7a2-40fb-8b41-bd08d933a276}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="testing.gyp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\testing\gtest\src\gtest-all.cc">
+      <Filter>..\..\..\testing\gtest\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

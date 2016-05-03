@@ -1,0 +1,106 @@
+﻿<div>
+    <div class="copy">
+        <h3>
+            Cell Edit Templates
+        </h3>
+        <p>
+            This sample demonstrates how to use cell edit templates to create cell editors for simple
+            and complex objects. The <b>wjFlexGridCellTemplate</b> introduces the <b>cell</b> local
+            template variable containing an object with the <b>item</b>, <b>row</b>, <b>col</b>,
+            <b>value</b> and <b>values</b> properties, which store cell related information useful
+            in template bindings. The two latter properties are specially intended for usage in cell
+            edit templates.
+        </p>
+        <p>
+            The <b>Amount</b> column uses a simple numeric value editor implemented using the
+            <b>wj-input-number</b> component. The component is bound to the <b>cell.value</b>
+            property that contains the cell value. By binding to <b>cell.value</b> instead of
+            an underlying item property, you allow <b>FlexGrid</b> to correctly process the cell
+            editing cancellation, which is caused by pressing <b>Esc</b> key.
+        </p>
+        <p>
+            The <b>Date Range</b> column is bound to the <b>start</b> item property of the <b>Date</b>
+            type, but actually shows <b>start - end</b> date range retrieved from two item properties.
+            To be consistent with the cell rendering, the cell editor uses two <b>wj-input-date</b>
+            components to edit each end of the range. To provide correct editing cancellation in this
+            case, the template element assigns the <b>valuePaths</b> property with the <b>{rangeEnd: 'item.end'}</b>
+            object, that defines the additional editing path (<b>item.end</b>) and its name (<b>rangeEnd</b>).
+            According to this definition, the <b>cell.values</b> property contains the <b>rangeEnd</b>
+            property with the value obtained using this path, and the second <b>wj-input-date</b> is bound
+            to the <b>cell.values.rangeEnd</b> property. This way, an editing cancellation will be processed
+            correctly by the grid for both editing values.
+        </p>
+        <p>
+            The <b>Person</b> column is bound to the item property containing complex object represented
+            by the <b>Person</b> class, which exposes <b>firstName</b> and <b>lastName</b> properties out of
+            its interface. It uses the same technique as the <b>Date Range</b> column to organize
+            correctly cancellable cell editing using two editor fields in a single cell.
+        </p>
+        <p>
+            The <b>Person (Editor Component)</b> is the same as its <b>Person</b> sibling. But,
+            cell edit template markup, here, is stored in the component's <b>personCellEditorHtml</b>
+            property and loaded using the <b>wj-html-loader</b> component, which is an analogue of
+            the Angular 1 <b>ngBindHtml</b> directive.
+        </p>
+    </div>
+    <div>
+
+        <!-- the grid -->
+        <wj-flex-grid #flex1 [allowResizing]="'Both'"
+                      class="grid"
+                      [itemsSource]="data"
+                      [isReadOnly]="false"
+                      [allowAddNew]="true"
+                      (beginningEdit)="beginningEdit(flex1, $event)">
+
+            <wj-flex-grid-column [header]="'Date Range'" [binding]="'start'" [width]="260">
+                <template wjFlexGridCellTemplate [cellType]="'Cell'" #cell="cell">
+                    {{format(cell.item.start, 'd')}} - {{format(cell.item.end, 'd')}}
+                </template>
+                <template wjFlexGridCellTemplate [cellType]="'CellEdit'" #cell="cell"
+                          [valuePaths]="{rangeEnd: 'item.end'}">
+                    <wj-input-date [(value)]="cell.value" [required]="false" style="width:120px"></wj-input-date>
+                    -
+                    <wj-input-date [(value)]="cell.values.rangeEnd" [required]="false" style="width:120px"></wj-input-date>
+                </template>
+            </wj-flex-grid-column>
+
+            <wj-flex-grid-column [header]="'Amount'" [binding]="'amount'" [format]="'n0'" [width]="150">
+                <template wjFlexGridCellTemplate [cellType]="'CellEdit'" #cell="cell">
+                    <wj-input-number [(value)]="cell.value" [required]="false" [step]="1">
+                    </wj-input-number>
+                </template>
+            </wj-flex-grid-column>
+
+            <wj-flex-grid-column [header]="'Person'" [binding]="'person'" [width]="220" #personCol [dataType]="'Object'">
+                <template wjFlexGridCellTemplate [cellType]="'Cell'" #cell="cell"
+                          [valuePaths]="{ln: 'item.person.lastName'}">
+                    {{cell.item[personCol.binding]?.firstName}} {{cell.values.ln}}
+                </template>
+                <template wjFlexGridCellTemplate [cellType]="'CellEdit'" #cell="cell"
+                          [valuePaths]="{fn: 'item.person.firstName', ln: 'item.person.lastName'}">
+                    First:
+                    <input [(ngModel)]="cell.values.fn" style="width:70px" />
+                    Last:
+                    <input [(ngModel)]="cell.values.ln" style="width:70px" />
+                </template>
+            </wj-flex-grid-column>
+
+            <wj-flex-grid-column [header]="'Person (Editor Component)'" [binding]="'person'" [width]="250"
+                                 #personEdCmpCol [dataType]="'Object'" [name]="'person2'">
+                <template wjFlexGridCellTemplate [cellType]="'Cell'" #cell="cell"
+                          [valuePaths]="{fn: 'item.person.firstName', ln: 'item.person.lastName'}">
+                    {{cell.item[personEdCmpCol.binding]?.firstName}} {{cell.values.ln}}
+                </template>
+                <template wjFlexGridCellTemplate [cellType]="'CellEdit'" #cell="cell"
+                          [valuePaths]="{fn: 'item.person.firstName', ln: 'item.person.lastName'}">
+                    <wj-html-loader [components]="[personCellEditor]"
+                                    [html]="personCellEditorHtml"
+                                    [bindingContext]="{cell: cell}">
+                    </wj-html-loader>
+                </template>
+            </wj-flex-grid-column>
+
+        </wj-flex-grid>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+package YuKonAPS;
+message DataField
+{
+required int32 id = 1;
+optional string value = 2;
+}
+
+message DataInterface
+{
+required string name = 1;
+required string mainKey = 2;
+repeated DataField fields = 3;
+repeated DataInterface subColl = 4;
+}

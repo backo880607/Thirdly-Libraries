@@ -1,0 +1,1 @@
+protoc -I=D:/Thirdly Libraries/google/protobuf/protoc-2.6.1-win32 --cpp_out=D:/Thirdly Libraries/google/protobuf/protoc-2.6.1-win32 D:/Thirdly Libraries/google/protobuf/protoc-2.6.1-win32/DataInterface.proto

@@ -1,0 +1,50 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "(sender)", "..\..\..\tools\gyp\sender", "{8981176E-4A0F-CADE-30A3-5E3F3F1CDE3A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "common", "..\common.vcproj", "{EBDB09D2-E8CE-BC5E-002D-C479EA38EC23}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "crash_report_sender", "crash_report_sender.vcproj", "{A945C792-A2DC-47E6-EC03-301EE296F98E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Purify|Win32 = Purify|Win32
+		Purify|x64 = Purify|x64
+		Release|x64 = Release|x64
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A945C792-A2DC-47E6-EC03-301EE296F98E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A945C792-A2DC-47E6-EC03-301EE296F98E}.Debug|Win32.Build.0 = Debug|Win32
+		{A945C792-A2DC-47E6-EC03-301EE296F98E}.Debug|x64.ActiveCfg = Debug|x64
+		{A945C792-A2DC-47E6-EC03-301EE296F98E}.Debug|x64.Build.0 = Debug|x64
+		{A945C792-A2DC-47E6-EC03-301EE296F98E}.Purify|Win32.ActiveCfg = Purify|Win32
+		{A945C792-A2DC-47E6-EC03-301EE296F98E}.Purify|Win32.Build.0 = Purify|Win32
+		{A945C792-A2DC-47E6-EC03-301EE296F98E}.Purify|x64.ActiveCfg = Purify|x64
+		{A945C792-A2DC-47E6-EC03-301EE296F98E}.Purify|x64.Build.0 = Purify|x64
+		{A945C792-A2DC-47E6-EC03-301EE296F98E}.Release|x64.ActiveCfg = Release|x64
+		{A945C792-A2DC-47E6-EC03-301EE296F98E}.Release|x64.Build.0 = Release|x64
+		{A945C792-A2DC-47E6-EC03-301EE296F98E}.Release|Win32.ActiveCfg = Release|Win32
+		{A945C792-A2DC-47E6-EC03-301EE296F98E}.Release|Win32.Build.0 = Release|Win32
+		{EBDB09D2-E8CE-BC5E-002D-C479EA38EC23}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EBDB09D2-E8CE-BC5E-002D-C479EA38EC23}.Debug|Win32.Build.0 = Debug|Win32
+		{EBDB09D2-E8CE-BC5E-002D-C479EA38EC23}.Debug|x64.ActiveCfg = Debug|x64
+		{EBDB09D2-E8CE-BC5E-002D-C479EA38EC23}.Debug|x64.Build.0 = Debug|x64
+		{EBDB09D2-E8CE-BC5E-002D-C479EA38EC23}.Purify|Win32.ActiveCfg = Purify|Win32
+		{EBDB09D2-E8CE-BC5E-002D-C479EA38EC23}.Purify|Win32.Build.0 = Purify|Win32
+		{EBDB09D2-E8CE-BC5E-002D-C479EA38EC23}.Purify|x64.ActiveCfg = Purify|x64
+		{EBDB09D2-E8CE-BC5E-002D-C479EA38EC23}.Purify|x64.Build.0 = Purify|x64
+		{EBDB09D2-E8CE-BC5E-002D-C479EA38EC23}.Release|x64.ActiveCfg = Release|x64
+		{EBDB09D2-E8CE-BC5E-002D-C479EA38EC23}.Release|x64.Build.0 = Release|x64
+		{EBDB09D2-E8CE-BC5E-002D-C479EA38EC23}.Release|Win32.ActiveCfg = Release|Win32
+		{EBDB09D2-E8CE-BC5E-002D-C479EA38EC23}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A945C792-A2DC-47E6-EC03-301EE296F98E} = {8981176E-4A0F-CADE-30A3-5E3F3F1CDE3A}
+	EndGlobalSection
+EndGlobal

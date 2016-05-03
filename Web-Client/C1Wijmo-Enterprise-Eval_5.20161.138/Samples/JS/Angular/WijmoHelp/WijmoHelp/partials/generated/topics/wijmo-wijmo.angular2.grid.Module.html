@@ -1,0 +1,137 @@
+<h2>Module wijmo/wijmo.angular2.grid</h2>
+<dl class="dl-horizontal">
+<dt>File</dt><dd>wijmo.angular2.js</dd>
+</dl>
+<p><p>Contains Angular 2 components for the <b>wijmo.grid</b> module. </p>
+
+<p><b>wijmo.angular2.grid</b> is an external TypeScript module that can be imported to your code
+using its ambient module name. For example:</p>
+
+<p><pre>import * as wjGrid from 'wijmo/wijmo.angular2.grid';
+&nbsp;
+&#64;Component({
+    directives: [wjGrid.WjFlexGrid],
+    template: '&lt;wj-flex-grid [itemsSource]="data"&gt;&lt;/wj-flex-grid&gt;',
+    selector: 'my-cmp',
+})
+export class MyCmp {
+    data: any[];
+}</pre></p></p>
+<div class="panel panel-default">
+<div class="panel-heading">
+<h3 style="margin:0px" ng-click="hideClasses = !hideClasses">
+<span class="glyph-collapsed" ng-show="hideClasses"></span>
+<span class="glyph-expanded" ng-hide="hideClasses"></span>
+Classes
+</h3>
+</div>
+<table ng-hide="hideClasses" class="table table-condensed" style="font:inherit">
+<thead>
+<tr>
+
+<th></th>
+
+<th>Name</th>
+
+<th>Description</th>
+
+</tr>
+</thead>
+<tbody>
+
+    <tr>
+      <td></td>
+      <td><a href="topic/wijmo-wijmo.angular2.grid.WjFlexGrid.Class.html"><b>WjFlexGrid</b></a></td>
+      <td><p>Angular 2 component for the <a href="topic/wijmo.grid.FlexGrid.Class.html"><b>FlexGrid</b></a> control.</p>
+
+<p>Use the <b>wj-flex-grid</b> component to add <b>FlexGrid</b> controls to your 
+Angular 2 applications. For details about Angular 2 markup syntax, see 
+<a href="static/angular2Markup.html">Angular 2 Markup</a>. For example:</p>
+
+<p><pre>&lt;p&gt;Here is a data bound FlexGrid control with four columns:&lt;/p&gt;
+&lt;wj-flex-grid [itemsSource]="data"&gt;
+  &lt;wj-flex-grid-column 
+    [header]="'Country'" 
+    [binding]="'country'"&gt;
+  &lt;/wj-flex-grid-column&gt;
+  &lt;wj-flex-grid-column 
+    [header]="'Sales'" 
+    [binding]="'sales'"&gt;
+  &lt;/wj-flex-grid-column&gt;
+  &lt;wj-flex-grid-column 
+    [header]="'Expenses'" 
+    [binding]="'expenses'"&gt;
+  &lt;/wj-flex-grid-column&gt;
+  &lt;wj-flex-grid-column 
+    [header]="'Downloads'" 
+    [binding]="'downloads'"&gt;
+  &lt;/wj-flex-grid-column&gt;
+&lt;/wj-flex-grid&gt;</pre></p>
+
+<p>The <b>WjFlexGrid</b> component is derived from the <b>FlexGrid</b> control and
+inherits all its properties, events and methods.</p>
+
+<p>The <b>wj-flex-grid</b> component may contain <a href="topic/wijmo-wijmo.angular2.grid.WjFlexGridColumn.Class.html"><b>WjFlexGridColumn</b></a>, 
+<a href="topic/wijmo-wijmo.angular2.grid.WjFlexGridCellTemplate.Class.html"><b>WjFlexGridCellTemplate</b></a>, 
+<a href="topic/wijmo-wijmo.angular2.grid.detail.WjFlexGridDetail.Class.html"><b>WjFlexGridDetail</b></a> and 
+<a href="topic/wijmo-wijmo.angular2.grid.filter.WjFlexGridFilter.Class.html"><b>WjFlexGridFilter</b></a> child components.</p></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><a href="topic/wijmo-wijmo.angular2.grid.WjFlexGridCellTemplate.Class.html"><b>WjFlexGridCellTemplate</b></a></td>
+      <td>TBD</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><a href="topic/wijmo-wijmo.angular2.grid.WjFlexGridColumn.Class.html"><b>WjFlexGridColumn</b></a></td>
+      <td><p>Angular 2 component for the <a href="topic/wijmo.grid.FlexGrid.Class.html"><b>FlexGrid</b></a> <a href="topic/wijmo.grid.Column.Class.html"><b>Column</b></a> control.</p>
+
+<p>The <b>wj-flex-grid-column</b> component must be contained in a 
+<a href="topic/wijmo-wijmo.angular2.grid.WjFlexGrid.Class.html"><b>WjFlexGrid</b></a> component.</p>
+
+<p>Use the <b>wj-flex-grid-column</b> component to add <b>Column</b> objects to your 
+Angular 2 applications. For details about Angular 2 markup syntax, see 
+<a href="static/angular2Markup.html">Angular 2 Markup</a>.</p>
+
+<p>The <b>WjFlexGridColumn</b> component is derived from the <b>Column</b> class and
+inherits all its properties, events and methods.</p>
+
+<p>The <b>wj-flex-grid-column</b> component may contain 
+<a href="topic/wijmo-wijmo.angular2.grid.WjFlexGridCellTemplate.Class.html"><b>WjFlexGridCellTemplate</b></a> child directives.</p></td>
+    </tr>
+</tbody>
+</table>
+</div>
+
+<div class="panel panel-default">
+<div class="panel-heading">
+<h3 style="margin:0px" ng-click="hideEnumerations = !hideEnumerations">
+<span class="glyph-collapsed" ng-show="hideEnumerations"></span>
+<span class="glyph-expanded" ng-hide="hideEnumerations"></span>
+Enumerations
+</h3>
+</div>
+<table ng-hide="hideEnumerations" class="table table-condensed" style="font:inherit">
+<thead>
+<tr>
+
+<th></th>
+
+<th>Name</th>
+
+<th>Description</th>
+
+</tr>
+</thead>
+<tbody>
+
+    <tr>
+      <td></td>
+      <td><a href="topic/wijmo-wijmo.angular2.grid.CellTemplateType.Enum.html"><b>CellTemplateType</b></a></td>
+      <td>Defines the type of cell to which to apply the template. This value is specified in the <b>cell-type</b> attribute 
+of the <a href="topic/wijmo-wijmo.angular2.grid.WjFlexGridCellTemplate.Class.html"><b>WjFlexGridCellTemplate</b></a> directive.</td>
+    </tr>
+</tbody>
+</table>
+</div>
+
